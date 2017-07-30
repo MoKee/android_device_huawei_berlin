@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/honor/berlin/berlin-vendor.mk)
+$(call inherit-product-if-exists, vendor/huawei/berlin/berlin-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay

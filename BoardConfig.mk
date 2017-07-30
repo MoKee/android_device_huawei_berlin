@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/honor/berlin
+LOCAL_PATH := device/huawei/berlin
 
 # Architecture
 TARGET_ARCH := arm64
@@ -73,10 +73,10 @@ TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BACKLIGHT_PATH := /sys/class/leds/lcd_backlight0/brightness
 
-# CMHW
+# MKHW
 BOARD_HARDWARE_CLASS := \
-    $(LOCAL_PATH)/cmhw \
-    hardware/cyanogen/cmhw
+    $(LOCAL_PATH)/mkhw \
+    hardware/mokee/mkhw
 
 # Display
 USE_OPENGL_RENDERER := true
@@ -98,7 +98,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
 
-TARGET_KERNEL_SOURCE := kernel/honor/berlin
+TARGET_KERNEL_SOURCE := kernel/huawei/berlin
 TARGET_KERNEL_CONFIG := hisi_6250_defconfig
 
 # Lights
@@ -124,7 +124,7 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.hi6250
 
 # RIL
 TARGET_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
-BOARD_RIL_CLASS := ../../../device/honor/berlin/ril
+BOARD_RIL_CLASS := ../../../device/huawei/berlin/ril
 PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := proprietary
 
@@ -142,7 +142,7 @@ TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_berlin.cpp
 
 # Sepolicy
 BOARD_SEPOLICY_DIRS += \
-	device/honor/berlin/sepolicy
+	device/huawei/berlin/sepolicy
 
 # Wifi
 WPA_SUPPLICANT_VERSION          := VER_0_8_X
@@ -151,4 +151,4 @@ BOARD_HOSTAPD_DRIVER 		:= NL80211
 CONFIG_DRIVER_NL80211		:= y
 
 # inherit from the proprietary version
--include vendor/honor/berlin/BoardConfigVendor.mk
+-include vendor/huawei/berlin/BoardConfigVendor.mk

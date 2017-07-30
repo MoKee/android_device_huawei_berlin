@@ -1,0 +1,10 @@
+[
+ {
+   "repository": "android_vendor_huawei_berlin",
+   "target_path": "vendor/huawei/berlin"
+ },
+ {
+   "repository": "android_kernel_huawei_berlin",
+   "target_path": "kernel/huawei/berlin"
+ }
+]
